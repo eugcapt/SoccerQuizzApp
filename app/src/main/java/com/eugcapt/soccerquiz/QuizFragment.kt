@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import com.eugcapt.soccerquiz.databinding.FragmentWelcomeScreenBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -15,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [WelcomeScreen.newInstance] factory method to
+ * Use the [QuizFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class WelcomeScreen : Fragment() {
+class QuizFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,9 +33,8 @@ class WelcomeScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        val binder: FragmentWelcomeScreenBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome_screen,container, false )
-        return binder.root
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_quiz, container, false)
     }
 
     companion object {
@@ -47,12 +44,12 @@ class WelcomeScreen : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment WelcomeScreen.
+         * @return A new instance of fragment QuizFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            WelcomeScreen().apply {
+            QuizFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
