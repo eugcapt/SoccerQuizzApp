@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/backgound" />
 
     <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bangers"

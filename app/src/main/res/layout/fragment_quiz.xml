@@ -11,29 +11,29 @@
             android:layout_height="match_parent"
             android:fillViewport="true">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
 
-        <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/footbalFieldImageView"
+                            android:id="@+id/imageView6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/football_field"
-                            app:layout_constraintBottom_toTopOf="@+id/guideline"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline3"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent" />
 
                         <TextView
-                            android:id="@+id/titleTextView"
+                            android:id="@+id/textView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bangers"
                             android:text="Soccer Quiz"
                             android:textColor="@color/white"
-                            android:textSize="48sp"
+                            android:textSize="48dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.497"
@@ -42,87 +42,23 @@
                             app:layout_constraintVertical_bias="0.027" />
 
                         <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/guideline"
+                            android:id="@+id/guideline3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             app:layout_constraintGuide_begin="388dp" />
 
                         <ImageView
-                            android:id="@+id/ballImageView"
+                            android:id="@+id/imageView7"
                             android:layout_width="39dp"
                             android:layout_height="32dp"
-                            android:layout_marginTop="24dp"
                             android:src="@drawable/ic_ball"
                             app:layout_constraintDimensionRatio="1:1"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+                            tools:layout_editor_absoluteX="186dp"
+                            tools:layout_editor_absoluteY="131dp" />
 
-            <RadioGroup
-                android:id="@+id/quizRadioGroup"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.059"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionTextView">
 
-                <RadioButton
-                    android:id="@+id/FirstRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:checked="true"
-                    android:text="First answer"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:id="@+id/SecondRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Second answer"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:id="@+id/ThirdRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Third answer"
-                    android:textSize="16sp" />
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/questionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="148dp"
-                android:text="Question"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ballImageView" />
-
-            <Button
-                android:id="@+id/passButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="Pass"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/quizRadioGroup"
-                app:layout_constraintVertical_bias="0.557" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </ScrollView>

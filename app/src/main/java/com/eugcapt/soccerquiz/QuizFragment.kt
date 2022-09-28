@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import com.eugcapt.soccerquiz.databinding.FragmentQuizBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,8 +34,7 @@ class QuizFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binder = DataBindingUtil.inflate<FragmentQuizBinding>(inflater, R.layout.fragment_quiz,container,false)
-        return binder.root
+        return inflater.inflate(R.layout.fragment_quiz, container, false)
     }
 
     companion object {
