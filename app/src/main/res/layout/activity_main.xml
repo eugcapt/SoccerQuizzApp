@@ -9,10 +9,12 @@
 
 
         <fragment
-            android:id="@+id/WelcomeScreenFragment"
-            android:name="com.eugcapt.soccerquiz.QuizFragment"
+            android:id="@+id/appNavHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            app:navGraph="@navigation/app_navigation"
+            app:defaultNavHost="true" />
 
     </LinearLayout>
 </layout>
