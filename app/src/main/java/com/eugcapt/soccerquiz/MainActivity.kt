@@ -8,8 +8,8 @@ import com.eugcapt.soccerquiz.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val binder = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
     }
 }

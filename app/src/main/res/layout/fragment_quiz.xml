@@ -6,28 +6,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".QuizFragment">
 
+        <data>
+             <variable
+                 name="quizFragment"
+                 type="com.eugcapt.soccerquiz.QuizFragment" />
+        </data>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-
+                    android:id="@+id/quizLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageView6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/footbalFieldImageView"
+                            android:layout_width="413dp"
+                            android:layout_height="356dp"
+                            android:layout_marginBottom="80dp"
                             android:src="@drawable/football_field"
-                            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent" />
 
                         <TextView
-                            android:id="@+id/textView"
+                            android:id="@+id/titleTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bangers"
@@ -39,23 +46,82 @@
                             app:layout_constraintHorizontal_bias="0.497"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.027" />
+                            app:layout_constraintVertical_bias="0.024" />
 
                         <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/guideline3"
+                            android:id="@+id/guideline"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             app:layout_constraintGuide_begin="388dp" />
 
                         <ImageView
-                            android:id="@+id/imageView7"
+                            android:id="@+id/ballImageView"
                             android:layout_width="39dp"
                             android:layout_height="32dp"
                             android:src="@drawable/ic_ball"
+                            app:layout_constraintBottom_toBottomOf="@+id/footbalFieldImageView"
                             app:layout_constraintDimensionRatio="1:1"
-                            tools:layout_editor_absoluteX="186dp"
-                            tools:layout_editor_absoluteY="131dp" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+                            app:layout_constraintVertical_bias="0.187" />
+
+                        <TextView
+                            android:id="@+id/questionTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{quizFragment.currentQuizItem.question}"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/footbalFieldImageView"
+                            tools:text ="question"/>
+
+                        <RadioGroup
+                            android:id="@+id/quizRadioGroup"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/questionTextView">
+
+                                <RadioButton
+
+                                    android:id="@+id/firstRadioButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:text="firstQuestion"
+                                    android:checked="true"
+                                    android:text="@{quizFragment.answers[0]}" />
+
+                                <RadioButton
+                                    android:id="@+id/secondRadioButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:text="secondQuestion"
+                                    android:text="@{quizFragment.answers[1]}" />
+
+                                <RadioButton
+                                    android:id="@+id/thirdRadioButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:text="thirdQuestion"
+                                    android:text="@{quizFragment.answers[2]}" />
+                        </RadioGroup>
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="PASS"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/quizRadioGroup" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

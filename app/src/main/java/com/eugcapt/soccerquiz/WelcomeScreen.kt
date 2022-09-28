@@ -35,9 +35,9 @@ class WelcomeScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        val binder: FragmentWelcomeScreenBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome_screen,container, false )
-        return binder.root
+        // Inflate the layout for this fragment
+       val binding: FragmentWelcomeScreenBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_welcome_screen,container,false)
+        return binding.root
     }
 
     companion object {
