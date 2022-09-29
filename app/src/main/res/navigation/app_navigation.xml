@@ -18,5 +18,22 @@
         android:id="@+id/quizFragment"
         android:name="com.eugcapt.soccerquiz.QuizFragment"
         android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_goalFragment2"
+            app:destination="@id/goalFragment2" />
+        <action
+            android:id="@+id/action_quizFragment_to_missFragment"
+            app:destination="@id/missFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalFragment2"
+        android:name="com.eugcapt.soccerquiz.GoalFragment"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" />
+    <fragment
+        android:id="@+id/missFragment"
+        android:name="com.eugcapt.soccerquiz.MissFragment"
+        android:label="fragment_miss"
+        tools:layout="@layout/fragment_miss" />
 </navigation>
