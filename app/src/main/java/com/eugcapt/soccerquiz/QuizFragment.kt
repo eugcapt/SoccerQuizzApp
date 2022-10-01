@@ -1,12 +1,12 @@
 package com.eugcapt.soccerquiz
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.eugcapt.soccerquiz.databinding.FragmentQuizBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -103,8 +103,20 @@ class QuizFragment : Fragment() {
              }
         }
 
+        (activity as AppCompatActivity).supportActionBar?.title = "Soccer Quiz"
+
+        setHasOptionsMenu(true)
 
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 
     private fun getRandomQuizItem(){
